@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulatore FV â Iperammortamento 2026 v2</title>
+<title>Simulatore FV &ndash; Iperammortamento 2026 v2</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
   :root {
@@ -189,10 +189,10 @@
 <body>
 <div class="container">
   <div class="header">
-    <div class="tag">IPERAMMORTAMENTO 2026 Â· L. 199/2025, cc. 427-436 Â· DM 05.01.2025</div>
-    <h1>Fotovoltaico industriale: moduli standard vs EU tipo b)/c) â analisi integrata</h1>
-    <div class="sub">Ing. Marco Belardi Â· LEAN4DIGITAL Â· BOS differenziato Â· VAN ammortamento Â· Degrado cumulato 25a</div>
-    <div class="version">v2.0 â marzo 2026 Â· aggiornato post Key Energy 2026</div>
+    <div class="tag">IPERAMMORTAMENTO 2026 &middot; L. 199/2025, cc. 427-436 &middot; DM 05.01.2025</div>
+    <h1>Fotovoltaico industriale: moduli standard vs EU tipo b)/c) &mdash; analisi integrata</h1>
+    <div class="sub">Ing. Marco Belardi &middot; LEAN4DIGITAL &middot; BOS differenziato &middot; VAN ammortamento &middot; Degrado cumulato 25a</div>
+    <div class="version">v2.0 &mdash; marzo 2026 &middot; aggiornato post Key Energy 2026</div>
   </div>
 
   <div class="grid">
@@ -202,7 +202,7 @@
       <!-- IMPIANTO -->
       <div class="pblock impianto">
         <div class="pblock-head">
-          <span class="pblock-icon">â¡</span>
+          <span class="pblock-icon">&#9889;</span>
           <span class="pblock-title">Impianto</span>
           <span class="pblock-badge" id="badge-potenza">1.000 kWp</span>
         </div>
@@ -210,53 +210,53 @@
           <div class="slider-row">
             <div class="slider-label"><span>Potenza installata</span><span class="slider-val" id="v-potenza">1.000 <span class="slider-unit">kWp</span></span></div>
             <input type="range" id="s-potenza" min="100" max="5000" step="50" value="1000">
-            <div class="slider-help">Potenza di picco CC Â· determina fascia massimale DM</div>
+            <div class="slider-help">Potenza di picco CC &middot; determina fascia massimale DM</div>
           </div>
           <div class="sub-label" style="margin-top:4px">Categoria moduli EU (Scenario B)</div>
           <div class="toggle-group" id="tg-cat">
             <button class="toggle-btn cyan" data-val="b" onclick="setToggle('cat',this)">Lett. b)</button>
             <button class="toggle-btn cyan active" data-val="c" onclick="setToggle('cat',this)">Lett. c)</button>
           </div>
-          <div class="slider-help" style="margin-bottom:6px">Massimale DM 05.01.2025, All. 1, Tab. 2a â fascia automatica per potenza</div>
+          <div class="slider-help" style="margin-bottom:6px">Massimale DM 05.01.2025, All. 1, Tab. 2a &mdash; fascia automatica per potenza</div>
         </div>
       </div>
 
       <!-- PREZZI MODULI -->
       <div class="pblock costiAmm">
         <div class="pblock-head">
-          <span class="pblock-icon">ð¦</span>
+          <span class="pblock-icon">&#128230;</span>
           <span class="pblock-title">Prezzi moduli</span>
-          <span class="pblock-badge" id="badge-moduli">135 / 305 â¬/kWp</span>
+          <span class="pblock-badge" id="badge-moduli">135 / 305 &euro;/kWp</span>
         </div>
         <div class="pblock-body">
           <div class="col2">
             <div>
-              <div class="sub-label" style="color:var(--txtM)">Scenario A â Standard</div>
+              <div class="sub-label" style="color:var(--txtM)">Scenario A &mdash; Standard</div>
               <div class="slider-row">
-                <div class="slider-label"><span>Moduli extra-UE</span><span class="slider-val" id="v-modStd">135 <span class="slider-unit">â¬/kWp</span></span></div>
+                <div class="slider-label"><span>Moduli extra-UE</span><span class="slider-val" id="v-modStd">135 <span class="slider-unit">&euro;/kWp</span></span></div>
                 <input type="range" id="s-modStd" min="60" max="250" step="5" value="135">
-                <div class="slider-help">Es. Tongwei TNC2.0 470W Â· Chengdu</div>
+                <div class="slider-help">Es. Tongwei TNC2.0 470W &middot; Chengdu</div>
               </div>
             </div>
             <div>
-              <div class="sub-label" style="color:var(--accentL)">Scenario B â EU b)/c)</div>
+              <div class="sub-label" style="color:var(--accentL)">Scenario B &mdash; EU b)/c)</div>
               <div class="slider-row">
-                <div class="slider-label"><span>Moduli EU (feb. 2026)</span><span class="slider-val" id="v-modEU">305 <span class="slider-unit">â¬/kWp</span></span></div>
+                <div class="slider-label"><span>Moduli EU (feb. 2026)</span><span class="slider-val" id="v-modEU">305 <span class="slider-unit">&euro;/kWp</span></span></div>
                 <input type="range" id="s-modEU" min="150" max="600" step="5" value="305">
-                <div class="slider-help">Offerta 28.02.2026 Â· 3SUN B48 460W HJT</div>
+                <div class="slider-help">Offerta 28.02.2026 &middot; 3SUN B48 460W HJT</div>
               </div>
             </div>
           </div>
           <div class="divider" style="background:#1A3358"></div>
-          <div class="sub-label">Scenario B2 â listino Key Energy (6 mar. 2026)</div>
+          <div class="sub-label">Scenario B2 &mdash; listino Key Energy (6 mar. 2026)</div>
           <div class="toggle-group" id="tg-ke">
             <button class="toggle-btn orange" data-val="off" onclick="setToggle('ke',this)">OFF</button>
-            <button class="toggle-btn orange active" data-val="on" onclick="setToggle('ke',this)">ON â 360 â¬/kWp</button>
+            <button class="toggle-btn orange active" data-val="on" onclick="setToggle('ke',this)">ON &mdash; 360 &euro;/kWp</button>
           </div>
           <div class="slider-row" id="ke-slider-row" style="display:none">
-            <div class="slider-label"><span>Moduli EU â listino KE</span><span class="slider-val" id="v-modKE">360 <span class="slider-unit">â¬/kWp</span></span></div>
+            <div class="slider-label"><span>Moduli EU &mdash; listino KE</span><span class="slider-val" id="v-modKE">360 <span class="slider-unit">&euro;/kWp</span></span></div>
             <input type="range" id="s-modKE" min="150" max="600" step="5" value="360">
-            <div class="slider-help">Dato da colloqui commerciali Key Energy 2026 Â· non listino ufficiale</div>
+            <div class="slider-help">Dato da colloqui commerciali Key Energy 2026 &middot; non listino ufficiale</div>
           </div>
         </div>
       </div>
@@ -264,30 +264,30 @@
       <!-- BOS SCENARIO A -->
       <div class="pblock costiAmm">
         <div class="pblock-head">
-          <span class="pblock-icon">ð§</span>
-          <span class="pblock-title">BOS â Scenario A (base)</span>
-          <span class="pblock-badge" id="badge-bosA">390 â¬/kWp</span>
+          <span class="pblock-icon">&#128295;</span>
+          <span class="pblock-title">BOS &mdash; Scenario A (base)</span>
+          <span class="pblock-badge" id="badge-bosA">390 &euro;/kWp</span>
         </div>
         <div class="pblock-body">
           <div class="col2">
             <div class="slider-row">
-              <div class="slider-label"><span>Inverter</span><span class="slider-val" id="v-inv">55 <span class="slider-unit">â¬/kWp</span></span></div>
+              <div class="slider-label"><span>Inverter</span><span class="slider-val" id="v-inv">55 <span class="slider-unit">&euro;/kWp</span></span></div>
               <input type="range" id="s-inv" min="30" max="120" step="5" value="55">
             </div>
             <div class="slider-row">
-              <div class="slider-label"><span>Strutture a tetto (A)</span><span class="slider-val" id="v-str">75 <span class="slider-unit">â¬/kWp</span></span></div>
+              <div class="slider-label"><span>Strutture a tetto (A)</span><span class="slider-val" id="v-str">75 <span class="slider-unit">&euro;/kWp</span></span></div>
               <input type="range" id="s-str" min="40" max="150" step="5" value="75">
             </div>
             <div class="slider-row">
-              <div class="slider-label"><span>Posa moduli/strutt. (A)</span><span class="slider-val" id="v-pos">90 <span class="slider-unit">â¬/kWp</span></span></div>
+              <div class="slider-label"><span>Posa moduli/strutt. (A)</span><span class="slider-val" id="v-pos">90 <span class="slider-unit">&euro;/kWp</span></span></div>
               <input type="range" id="s-pos" min="50" max="180" step="5" value="90">
             </div>
             <div class="slider-row">
-              <div class="slider-label"><span>Cablaggio/Cabina/VVF (A)</span><span class="slider-val" id="v-cab">150 <span class="slider-unit">â¬/kWp</span></span></div>
+              <div class="slider-label"><span>Cablaggio/Cabina/VVF (A)</span><span class="slider-val" id="v-cab">150 <span class="slider-unit">&euro;/kWp</span></span></div>
               <input type="range" id="s-cab" min="80" max="280" step="5" value="150">
             </div>
             <div class="slider-row">
-              <div class="slider-label"><span>CCI</span><span class="slider-val" id="v-cci">20 <span class="slider-unit">â¬/kWp</span></span></div>
+              <div class="slider-label"><span>CCI</span><span class="slider-val" id="v-cci">20 <span class="slider-unit">&euro;/kWp</span></span></div>
               <input type="range" id="s-cci" min="10" max="60" step="5" value="20">
             </div>
           </div>
@@ -297,26 +297,26 @@
       <!-- BOS DIFFERENZIATO -->
       <div class="pblock bosDiff">
         <div class="pblock-head">
-          <span class="pblock-icon">Î</span>
-          <span class="pblock-title">BOS differenziato â ratio fisici</span>
-          <span class="pblock-badge" id="badge-bosRatio">Î +29 â¬/kWp</span>
+          <span class="pblock-icon">&Delta;</span>
+          <span class="pblock-title">BOS differenziato &mdash; ratio fisici</span>
+          <span class="pblock-badge" id="badge-bosRatio">&Delta; +29 &euro;/kWp</span>
         </div>
         <div class="pblock-body">
-          <div class="info-note purple" style="margin-bottom:8px">Il BOS dello Scenario B Ã¨ ricalcolato applicando i ratio fisici (superficie, peso) del modulo EU rispetto allo standard. Metodologia: sezione 3.1 dell'analisi.</div>
+          <div class="info-note purple" style="margin-bottom:8px">Il BOS dello Scenario B &egrave; ricalcolato applicando i ratio fisici (superficie, peso) del modulo EU rispetto allo standard. Metodologia: sezione 3.1 dell'analisi.</div>
           <div class="slider-row">
             <div class="slider-label"><span>Ratio superficie/kWp (EU vs std)</span><span class="slider-val" id="v-rSup">1,169</span></div>
             <input type="range" id="s-rSup" min="1.00" max="1.50" step="0.001" value="1.169">
-            <div class="slider-help">3SUN: 2,285 mÂ²/mod Â· TW: 1,998 mÂ²/mod â +14,4% area; +2,2% n.mod â Ã1,169 â¬/kWp strutture</div>
+            <div class="slider-help">3SUN: 2,285 m&sup2;/mod &middot; TW: 1,998 m&sup2;/mod &#8594; +14,4% area; +2,2% n.mod &#8594; &times;1,169 &euro;/kWp strutture</div>
           </div>
           <div class="slider-row">
             <div class="slider-label"><span>Overhead posa (peso &gt;25 kg)</span><span class="slider-val" id="v-rPeso">15 <span class="slider-unit">%</span></span></div>
             <input type="range" id="s-rPeso" min="0" max="40" step="1" value="15">
-            <div class="slider-help">3SUN: 29,0 kg â soglia UNI EN ISO 11228-2 in quota = 25 kg â squadra a 2 operatori</div>
+            <div class="slider-help">3SUN: 29,0 kg &mdash; soglia UNI EN ISO 11228-2 in quota = 25 kg &#8594; squadra a 2 operatori</div>
           </div>
           <div class="slider-row">
             <div class="slider-label"><span>Quota variabile cablaggio DC</span><span class="slider-val" id="v-rCab">20 <span class="slider-unit">%</span></span></div>
             <input type="range" id="s-rCab" min="10" max="40" step="5" value="20">
-            <div class="slider-help">Porzione che scala con la superficie (stringa DC). Il restante Ã¨ fisso (cabina MT, VVF, AC)</div>
+            <div class="slider-help">Porzione che scala con la superficie (stringa DC). Il restante &egrave; fisso (cabina MT, VVF, AC)</div>
           </div>
           <div id="ratio-display"></div>
         </div>
@@ -325,23 +325,23 @@
       <!-- COSTI NON AMMISSIBILI -->
       <div class="pblock costiNon">
         <div class="pblock-head">
-          <span class="pblock-icon">â</span>
+          <span class="pblock-icon">&#8856;</span>
           <span class="pblock-title">Costi non ammissibili</span>
-          <span class="pblock-badge" id="badge-nonAmm">90 / 110 â¬/kWp</span>
+          <span class="pblock-badge" id="badge-nonAmm">90 / 110 &euro;/kWp</span>
         </div>
         <div class="pblock-body">
           <div class="slider-row">
-            <div class="slider-label"><span>Progettazione + pratiche autor.</span><span class="slider-val" id="v-prg">60 <span class="slider-unit">â¬/kWp</span></span></div>
+            <div class="slider-label"><span>Progettazione + pratiche autor.</span><span class="slider-val" id="v-prg">60 <span class="slider-unit">&euro;/kWp</span></span></div>
             <input type="range" id="s-prg" min="20" max="120" step="5" value="60">
           </div>
           <div class="slider-row">
-            <div class="slider-label"><span>Sicurezza di cantiere</span><span class="slider-val" id="v-sic">30 <span class="slider-unit">â¬/kWp</span></span></div>
+            <div class="slider-label"><span>Sicurezza di cantiere</span><span class="slider-val" id="v-sic">30 <span class="slider-unit">&euro;/kWp</span></span></div>
             <input type="range" id="s-sic" min="10" max="80" step="5" value="30">
           </div>
           <div class="slider-row">
-            <div class="slider-label"><span>Consulenza iper + pratiche GSE</span><span class="slider-val" id="v-con">20 <span class="slider-unit">â¬/kWp</span></span></div>
+            <div class="slider-label"><span>Consulenza iper + pratiche GSE</span><span class="slider-val" id="v-con">20 <span class="slider-unit">&euro;/kWp</span></span></div>
             <input type="range" id="s-con" min="0" max="60" step="5" value="20">
-            <div class="slider-help">Perizia asseverata + CCI iperammortamento â solo Scenario B</div>
+            <div class="slider-help">Perizia asseverata + CCI iperammortamento &mdash; solo Scenario B</div>
           </div>
         </div>
       </div>
@@ -349,16 +349,16 @@
       <!-- FISCALE -->
       <div class="pblock fiscale">
         <div class="pblock-head">
-          <span class="pblock-icon">Â§</span>
+          <span class="pblock-icon">&sect;</span>
           <span class="pblock-title">Parametri fiscali</span>
-          <span class="pblock-badge" id="badge-iper">Iper 180% Â· VAN 5%</span>
+          <span class="pblock-badge" id="badge-iper">Iper 180% &middot; VAN 5%</span>
         </div>
         <div class="pblock-body">
           <div class="col2">
             <div class="slider-row">
               <div class="slider-label"><span>Aliquota IRES</span><span class="slider-val" id="v-ires">24,0 <span class="slider-unit">%</span></span></div>
               <input type="range" id="s-ires" min="15" max="35" step="0.5" value="24">
-              <div class="slider-help">Art. 77 TUIR Â· standard 24%</div>
+              <div class="slider-help">Art. 77 TUIR &middot; standard 24%</div>
             </div>
             <div class="slider-row">
               <div class="slider-label"><span>Tasso di sconto VAN</span><span class="slider-val" id="v-disc">5,0 <span class="slider-unit">%</span></span></div>
@@ -367,22 +367,22 @@
             </div>
           </div>
           <div class="fascia-box" id="fascia-info" style="background:#0A150A; border:1px solid #1E3A10; border-radius:5px;"></div>
-          <div class="info-note purple" style="margin-top:4px">Ammortamento: coeff. 9% DM 31.12.1988 Gr. XVII. Anno 1: 4,5%; anni 2â10: 9%; anno 11: 14,5% (residuo). Ciclo ~11 anni.</div>
+          <div class="info-note purple" style="margin-top:4px">Ammortamento: coeff. 9% DM 31.12.1988 Gr. XVII. Anno 1: 4,5%; anni 2&ndash;10: 9%; anno 11: 14,5% (residuo). Ciclo ~11 anni.</div>
         </div>
       </div>
 
       <!-- ENERGIA -->
       <div class="pblock energia">
         <div class="pblock-head">
-          <span class="pblock-icon">â</span>
+          <span class="pblock-icon">&#9728;</span>
           <span class="pblock-title">Parametri energetici</span>
           <span class="pblock-badge">Autoconsumo 100%</span>
         </div>
         <div class="pblock-body">
           <div class="slider-row">
-            <div class="slider-label"><span>ProducibilitÃ  specifica base</span><span class="slider-val" id="v-prod">1.052 <span class="slider-unit">kWh/kWp</span></span></div>
+            <div class="slider-label"><span>Producibilit&agrave; specifica base</span><span class="slider-val" id="v-prod">1.052 <span class="slider-unit">kWh/kWp</span></span></div>
             <input type="range" id="s-prod" min="700" max="1600" step="10" value="1052">
-            <div class="slider-help">Uguale per entrambi gli scenari a paritÃ  di potenza e sito (1.073,5 Ã 98% = 1.052 caso analizzato)</div>
+            <div class="slider-help">Uguale per entrambi gli scenari a parit&agrave; di potenza e sito (1.073,5 &times; 98% = 1.052 caso analizzato)</div>
           </div>
           <div class="col2">
             <div>
@@ -410,7 +410,7 @@
           </div>
           <div class="col2">
             <div class="slider-row">
-              <div class="slider-label"><span>Costo energia evitata</span><span class="slider-val" id="v-enCost">0,160 <span class="slider-unit">â¬/kWh</span></span></div>
+              <div class="slider-label"><span>Costo energia evitata</span><span class="slider-val" id="v-enCost">0,160 <span class="slider-unit">&euro;/kWh</span></span></div>
               <input type="range" id="s-enCost" min="0.08" max="0.50" step="0.01" value="0.16">
               <div class="slider-help">Prezzo autoconsumo (PUN o PPA)</div>
             </div>
@@ -434,7 +434,7 @@
       <div id="energy-section"></div>
       <div id="payback-section"></div>
       <div class="disclaimer">
-        Simulatore v2.0 â finalitÃ  metodologica. Non costituisce consulenza fiscale nÃ© tecnica. Rif.: L. 199/2025, art. 1, cc. 427-436 Â· DM MIMIT 05.01.2025, All. 1, Tab. 2a Â· D.L. 181/2023, art. 12 Â· DM 31.12.1988, Gr. XVII Â· Art. 110 TUIR Â· UNI EN ISO 11228-2. BOS differenziato: metodologia sezione 3.1 analisi tecnica M. Belardi, marzo 2026.
+        Simulatore v2.0 &mdash; finalit&agrave; metodologica. Non costituisce consulenza fiscale n&eacute; tecnica. Rif.: L. 199/2025, art. 1, cc. 427-436 &middot; DM MIMIT 05.01.2025, All. 1, Tab. 2a &middot; D.L. 181/2023, art. 12 &middot; DM 31.12.1988, Gr. XVII &middot; Art. 110 TUIR &middot; UNI EN ISO 11228-2. BOS differenziato: metodologia sezione 3.1 analisi tecnica M. Belardi, marzo 2026.
       </div>
     </div>
   </div>
@@ -442,7 +442,7 @@
 
 <script>
 // ===================== UTILS =====================
-const fmt = (n, d=0) => isNaN(n)||!isFinite(n) ? 'â' : n.toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fmt = (n, d=0) => isNaN(n)||!isFinite(n) ? '&ndash;' : n.toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d});
 const $ = id => document.getElementById(id);
 const sgn = n => n >= 0 ? '+' : '';
 
@@ -461,14 +461,14 @@ function setToggle(group, btn) {
 
 // ===================== SLIDERS =====================
 const SL = {
-  potenza:{dec:0,unit:'kWp'}, modStd:{dec:0,unit:'â¬/kWp'}, modEU:{dec:0,unit:'â¬/kWp'},
-  modKE:{dec:0,unit:'â¬/kWp'}, inv:{dec:0,unit:'â¬/kWp'}, str:{dec:0,unit:'â¬/kWp'},
-  pos:{dec:0,unit:'â¬/kWp'}, cab:{dec:0,unit:'â¬/kWp'}, cci:{dec:0,unit:'â¬/kWp'},
+  potenza:{dec:0,unit:'kWp'}, modStd:{dec:0,unit:'&euro;/kWp'}, modEU:{dec:0,unit:'&euro;/kWp'},
+  modKE:{dec:0,unit:'&euro;/kWp'}, inv:{dec:0,unit:'&euro;/kWp'}, str:{dec:0,unit:'&euro;/kWp'},
+  pos:{dec:0,unit:'&euro;/kWp'}, cab:{dec:0,unit:'&euro;/kWp'}, cci:{dec:0,unit:'&euro;/kWp'},
   rSup:{dec:3}, rPeso:{dec:0,unit:'%'}, rCab:{dec:0,unit:'%'},
-  prg:{dec:0,unit:'â¬/kWp'}, sic:{dec:0,unit:'â¬/kWp'}, con:{dec:0,unit:'â¬/kWp'},
+  prg:{dec:0,unit:'&euro;/kWp'}, sic:{dec:0,unit:'&euro;/kWp'}, con:{dec:0,unit:'&euro;/kWp'},
   ires:{dec:1,unit:'%'}, disc:{dec:1,unit:'%'},
   prod:{dec:0,unit:'kWh/kWp'}, deg1A:{dec:1,unit:'%'}, deg1B:{dec:1,unit:'%'},
-  degA:{dec:2,unit:'%/a'}, degB:{dec:2,unit:'%/a'}, enCost:{dec:3,unit:'â¬/kWh'},
+  degA:{dec:2,unit:'%/a'}, degB:{dec:2,unit:'%/a'}, enCost:{dec:3,unit:'&euro;/kWh'},
   vita:{dec:0,unit:'anni'},
 };
 
@@ -484,7 +484,7 @@ function calcBosRatio(strA, posA, cabA, rSup, rPesoOH, rCabVar) {
   // strutture: scale by area ratio
   const strB = strA * rSup;
   // posa: 60% labor (n.mod +2.2%, peso OH), 40% surface
-  // n.mod ratio: 1/efficiency_ratio â rSup (same for simplicity, actual: mods_B/mods_A = (1000kWp/460W)/(1000kWp/470W) = 2174/2128 = 1.0216)
+  // n.mod ratio: 1/efficiency_ratio &#8776; rSup (same for simplicity, actual: mods_B/mods_A = (1000kWp/460W)/(1000kWp/470W) = 2174/2128 = 1.0216)
   const rNMod = 1.0216; // fixed: from datasheets
   const rPosaLabor = rNMod * (1 + rPesoOH/100); // 2 operators overhead
   const rPosaArea = rSup;
@@ -557,10 +557,10 @@ function getScaglioni(base) {
   return (2500000*1.80 + 7500000*1.00 + 10000000*0.50) / base;
 }
 function getScaglioneLabel(base) {
-  if (base <= 2500000) return '180% (â¤ 2,5 Mâ¬)';
+  if (base <= 2500000) return '180% (&le; 2,5 M&euro;)';
   if (base <= 10000000) return '180% su 2,5M + 100% resto';
   if (base <= 20000000) return '180%+100%+50% progressivo';
-  return 'SUPERA limite 20 Mâ¬';
+  return 'SUPERA limite 20 M&euro;';
 }
 
 // ===================== MAIN CALC =====================
@@ -569,12 +569,12 @@ function calculate() {
   const cat = state.cat;
   const keOn = state.ke === 'on';
 
-  // Prices per unit (â¬/kWp)
+  // Prices per unit (&euro;/kWp)
   const modA = gv('modStd');
   const modB1 = gv('modEU');
   const modB2 = keOn ? gv('modKE') : modB1;
 
-  // BOS base (Scenario A) in â¬/kWp
+  // BOS base (Scenario A) in &euro;/kWp
   const inv = gv('inv'), strA = gv('str'), posA = gv('pos'), cabA = gv('cab'), cci = gv('cci');
   const rSup = gv('rSup'), rPesoOH = gv('rPeso'), rCabVar = gv('rCab');
   const bos = calcBosRatio(strA, posA, cabA, rSup, rPesoOH, rCabVar);
@@ -594,7 +594,7 @@ function calculate() {
   const capB1_u = ammB1_u + nonB_u;
   const capB2_u = ammB2_u + nonB_u;
 
-  // In â¬
+  // In &euro;
   const ammA = ammA_u * P, nonA = nonA_u * P, capA = capA_u * P;
   const ammB1 = ammB1_u * P, nonB = nonB_u * P, capB1 = capB1_u * P;
   const ammB2 = ammB2_u * P, capB2 = capB2_u * P;
@@ -641,7 +641,7 @@ function calculate() {
   const degRowsB = calcDeg(prod, deg1B, degB, vita);
   const cumA = degRowsA[vita-1].cum, cumB = degRowsB[vita-1].cum;
   const deltaCumMWh = (cumB - cumA) * P / 1000; // MWh
-  const deltaCumVal = deltaCumMWh * 1000 * enCost; // â¬
+  const deltaCumVal = deltaCumMWh * 1000 * enCost; // &euro;
 
   const savAnn = degRowsA[0].prod * P / 1000 * 1000 * enCost;
 
@@ -653,11 +653,11 @@ function calculate() {
 
   // ---- UPDATE BADGES ----
   $('badge-potenza').textContent = `${fmt(P)} kWp`;
-  $('badge-moduli').textContent = `${fmt(modA)} / ${fmt(modB1)}${keOn?' / '+fmt(modB2):''} â¬/kWp`;
-  $('badge-bosA').textContent = `${fmt(ammA_u-modA)} â¬/kWp`;
-  $('badge-bosRatio').textContent = `Î BOS +${fmt(ammB1_u-inv-cci-modB1 - (strA+posA+cabA))} â¬/kWp`;
-  $('badge-nonAmm').textContent = `${fmt(nonA_u)} / ${fmt(nonB_u)} â¬/kWp`;
-  $('badge-iper').textContent = `Iper ${fmt(mkB1*100,0)}% Â· VAN ${fmt(disc*100,1)}%`;
+  $('badge-moduli').textContent = `${fmt(modA)} / ${fmt(modB1)}${keOn?' / '+fmt(modB2):''} &euro;/kWp`;
+  $('badge-bosA').textContent = `${fmt(ammA_u-modA)} &euro;/kWp`;
+  $('badge-bosRatio').textContent = `&Delta; BOS +${fmt(ammB1_u-inv-cci-modB1 - (strA+posA+cabA))} &euro;/kWp`;
+  $('badge-nonAmm').textContent = `${fmt(nonA_u)} / ${fmt(nonB_u)} &euro;/kWp`;
+  $('badge-iper').textContent = `Iper ${fmt(mkB1*100,0)}% &middot; VAN ${fmt(disc*100,1)}%`;
 
   // Update slider display values
   Object.keys(SL).forEach(k => {
@@ -670,33 +670,33 @@ function calculate() {
   // Fascia
   const fasciaB1 = getMassimale(P, 'b'), fasciaB1c = getMassimale(P, 'c');
   $('fascia-info').innerHTML = `
-    Scaglione iper: <strong style="color:var(--greenL)">${mkB1_lbl}</strong> su base ${fmt(ammB1_capped)} â¬
-    &nbsp;|&nbsp; Massimale DM: <strong style="color:var(--accentL)">lett. b) = ${fmt(fasciaB1)} â¬/kWp Â· lett. c) = ${fmt(fasciaB1c)} â¬/kWp</strong>
-    (fascia â¤ 1.000 kWe)
+    Scaglione iper: <strong style="color:var(--greenL)">${mkB1_lbl}</strong> su base ${fmt(ammB1_capped)} &euro;
+    &nbsp;|&nbsp; Massimale DM: <strong style="color:var(--accentL)">lett. b) = ${fmt(fasciaB1)} &euro;/kWp &middot; lett. c) = ${fmt(fasciaB1c)} &euro;/kWp</strong>
+    (fascia &le; 1.000 kWe)
   `;
 
   // Ratio display
   const rPosaTot = 0.60 * (1.0216*(1+rPesoOH/100)) + 0.40*rSup;
   const rCabTot = (1-rCabVar/100) + (rCabVar/100)*rSup;
   $('ratio-display').innerHTML = `
-    <div class="ratio-row"><span class="ratio-label">Strutture B/A</span><span class="ratio-value">Ã${fmt(rSup,3)}</span><span class="ratio-note">${fmt(strA)} â ${fmt(bos.strB,1)} â¬/kWp</span></div>
-    <div class="ratio-row"><span class="ratio-label">Posa B/A</span><span class="ratio-value">Ã${fmt(rPosaTot,3)}</span><span class="ratio-note">${fmt(posA)} â ${fmt(bos.posB,1)} â¬/kWp</span></div>
-    <div class="ratio-row"><span class="ratio-label">Cablaggio B/A</span><span class="ratio-value">Ã${fmt(rCabTot,3)}</span><span class="ratio-note">${fmt(cabA)} â ${fmt(bos.cabB,1)} â¬/kWp</span></div>
+    <div class="ratio-row"><span class="ratio-label">Strutture B/A</span><span class="ratio-value">&times;${fmt(rSup,3)}</span><span class="ratio-note">${fmt(strA)} &#8594; ${fmt(bos.strB,1)} &euro;/kWp</span></div>
+    <div class="ratio-row"><span class="ratio-label">Posa B/A</span><span class="ratio-value">&times;${fmt(rPosaTot,3)}</span><span class="ratio-note">${fmt(posA)} &#8594; ${fmt(bos.posB,1)} &euro;/kWp</span></div>
+    <div class="ratio-row"><span class="ratio-label">Cablaggio B/A</span><span class="ratio-value">&times;${fmt(rCabTot,3)}</span><span class="ratio-note">${fmt(cabA)} &#8594; ${fmt(bos.cabB,1)} &euro;/kWp</span></div>
   `;
 
   // ---- KPIs ----
   const colB1 = netVanB1 >= 0 ? 'var(--greenL)' : 'var(--redL)';
   const colB2 = netVanB2 >= 0 ? 'var(--greenL)' : 'var(--redL)';
   const kpiMain = keOn ? [
-    mkpi('Vantaggio VAN (B1 305)', sgn(netVanB1)+fmt(netVanB1), 'â¬', colB1, `Nominale: ${sgn(netNomB1)}${fmt(netNomB1)} â¬`),
-    mkpi('Vantaggio VAN (B2 KE)', sgn(netVanB2)+fmt(netVanB2), 'â¬', colB2, `Nominale: ${sgn(netNomB2)}${fmt(netNomB2)} â¬`),
+    mkpi('Vantaggio VAN (B1 305)', sgn(netVanB1)+fmt(netVanB1), '&euro;', colB1, `Nominale: ${sgn(netNomB1)}${fmt(netNomB1)} &euro;`),
+    mkpi('Vantaggio VAN (B2 KE)', sgn(netVanB2)+fmt(netVanB2), '&euro;', colB2, `Nominale: ${sgn(netNomB2)}${fmt(netNomB2)} &euro;`),
     mkpi('Payback netto (B1)', fmt(pbB1n,1), 'anni', 'var(--accentL)', `Sc. A: ${fmt(pbA,1)} anni`),
-    mkpi('Î energia cumulata', sgn(deltaCumMWh)+fmt(deltaCumMWh,0), 'MWh', 'var(--teal)', `â ${sgn(deltaCumVal)}${fmt(deltaCumVal)} â¬ / ${vita}a`),
+    mkpi('&Delta; energia cumulata', sgn(deltaCumMWh)+fmt(deltaCumMWh,0), 'MWh', 'var(--teal)', `&#8776; ${sgn(deltaCumVal)}${fmt(deltaCumVal)} &euro; / ${vita}a`),
   ] : [
-    mkpi('Vantaggio netto VAN', sgn(netVanB1)+fmt(netVanB1), 'â¬', colB1, `Nominale: ${sgn(netNomB1)}${fmt(netNomB1)} â¬`),
-    mkpi('Risparmio IRES', fmt(iresB1), 'â¬', 'var(--purpleL)', `Iper ${fmt(mkB1*100,0)}% su ${fmt(ammB1_capped)} â¬`),
+    mkpi('Vantaggio netto VAN', sgn(netVanB1)+fmt(netVanB1), '&euro;', colB1, `Nominale: ${sgn(netNomB1)}${fmt(netNomB1)} &euro;`),
+    mkpi('Risparmio IRES', fmt(iresB1), '&euro;', 'var(--purpleL)', `Iper ${fmt(mkB1*100,0)}% su ${fmt(ammB1_capped)} &euro;`),
     mkpi('Payback netto (B)', fmt(pbB1n,1), 'anni', 'var(--accentL)', `vs ${fmt(pbA,1)} anni Sc. A`),
-    mkpi('Î energia cumulata', sgn(deltaCumMWh)+fmt(deltaCumMWh,0), 'MWh', 'var(--teal)', `â ${sgn(deltaCumVal)}${fmt(deltaCumVal)} â¬`),
+    mkpi('&Delta; energia cumulata', sgn(deltaCumMWh)+fmt(deltaCumMWh,0), 'MWh', 'var(--teal)', `&#8776; ${sgn(deltaCumVal)}${fmt(deltaCumVal)} &euro;`),
   ];
   $('kpis').innerHTML = kpiMain.join('');
 
@@ -705,12 +705,12 @@ function calculate() {
   $('ceiling-row').innerHTML = `
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <div class="ceiling ${okB1?'ok':'ko'}" style="flex:1">
-        <span style="font-size:14px">${okB1?'â':'â '}</span>
-        <span>Sc. B1 ${fmt(ammB1_u,0)} â¬/kWp â ${okB1?'entro':'SUPERA'} massimale ${fmt(mass,0)} â¬/kWp (DM, lett. ${cat.toUpperCase()}, fascia ${fmt(P)} kWp)</span>
+        <span style="font-size:14px">${okB1?'&#10003;':'&#9888;'}</span>
+        <span>Sc. B1 ${fmt(ammB1_u,0)} &euro;/kWp &mdash; ${okB1?'entro':'SUPERA'} massimale ${fmt(mass,0)} &euro;/kWp (DM, lett. ${cat.toUpperCase()}, fascia ${fmt(P)} kWp)</span>
       </div>
       ${keOn?`<div class="ceiling ${okB2?'ok':'warn'}" style="flex:1">
-        <span style="font-size:14px">${okB2?'â':'â '}</span>
-        <span>Sc. B2 ${fmt(ammB2_u,0)} â¬/kWp â ${okB2?'entro':'SUPERA'} massimale ${fmt(mass,0)} â¬/kWp</span>
+        <span style="font-size:14px">${okB2?'&#10003;':'&#9888;'}</span>
+        <span>Sc. B2 ${fmt(ammB2_u,0)} &euro;/kWp &mdash; ${okB2?'entro':'SUPERA'} massimale ${fmt(mass,0)} &euro;/kWp</span>
       </div>`:''}
     </div>`;
 
@@ -731,15 +731,15 @@ function calculate() {
 
   $('cost-tables').innerHTML = `
   <div class="scard accent">
-    <div class="scard-title" style="color:var(--accentL)">Cost breakdown â ${fmt(P)} kWp (valori â¬/kWp e â¬)</div>
+    <div class="scard-title" style="color:var(--accentL)">Cost breakdown &mdash; ${fmt(P)} kWp (valori &euro;/kWp e &euro;)</div>
     <table>
-      <thead>${thdr(['Voce', `A â std (${fmt(modA)} â¬/kWp)`, `B1 â EU ${fmt(modB1)} â¬/kWp`, keOn?`B2 â KE ${fmt(modB2)} â¬/kWp`:''].filter(Boolean))}</thead>
+      <thead>${thdr(['Voce', `A &mdash; std (${fmt(modA)} &euro;/kWp)`, `B1 &mdash; EU ${fmt(modB1)} &euro;/kWp`, keOn?`B2 &mdash; KE ${fmt(modB2)} &euro;/kWp`:''].filter(Boolean))}</thead>
       <tbody>
         ${cbRow('Fornitura moduli', modA, modB1, modB2, P, true, true, keOn)}
         ${cbRow('Inverter', inv, inv, inv, P, true, false, keOn)}
-        ${cbRow('Strutture a tetto', strA, bos.strB, bos.strB, P, true, false, keOn, 'Ã'+fmt(rSup,3))}
-        ${cbRow('Posa moduli/strutture', posA, bos.posB, bos.posB, P, true, false, keOn, 'Ã'+fmt(rPosaTot,3))}
-        ${cbRow('Cablaggio/Cabina MT/VVF', cabA, bos.cabB, bos.cabB, P, true, false, keOn, 'Ã'+fmt(rCabTot,3))}
+        ${cbRow('Strutture a tetto', strA, bos.strB, bos.strB, P, true, false, keOn, '&times;'+fmt(rSup,3))}
+        ${cbRow('Posa moduli/strutture', posA, bos.posB, bos.posB, P, true, false, keOn, '&times;'+fmt(rPosaTot,3))}
+        ${cbRow('Cablaggio/Cabina MT/VVF', cabA, bos.cabB, bos.cabB, P, true, false, keOn, '&times;'+fmt(rCabTot,3))}
         ${cbRow('CCI', cci, cci, cci, P, true, false, keOn)}
         ${cbRowTotal('Subtot. AMMISSIBILI', ammA_u, ammB1_u, ammB2_u, P, keOn, true)}
         ${cbRow('Progettaz. + pratiche', prg, prg, prg, P, false, false, keOn)}
@@ -750,7 +750,7 @@ function calculate() {
       </tbody>
     </table>
     <div style="font-size:10px;color:var(--txtM);margin-top:6px">
-      BOS Sc. B ricalcolato da Sc. A: strutture Ãsup.ratio, posa Ã(60% labor+peso + 40% area), cablaggio Ã(fisso + var.Ãarea). Inverter e CCI: identici. Costi non ammissibili (art. 110 TUIR): esclusi dalla base iper.
+      BOS Sc. B ricalcolato da Sc. A: strutture &times;sup.ratio, posa &times;(60% labor+peso + 40% area), cablaggio &times;(fisso + var.&times;area). Inverter e CCI: identici. Costi non ammissibili (art. 110 TUIR): esclusi dalla base iper.
     </div>
   </div>`;
 
@@ -759,33 +759,33 @@ function calculate() {
   $('fiscal-section').innerHTML = `
   <div class="${gridClass}" id="fs-inner">
     <div class="scard purple">
-      <div class="scard-title" style="color:var(--purpleL)">Â§ Analisi fiscale â Sc. B1 (${fmt(modB1)} â¬/kWp)</div>
+      <div class="scard-title" style="color:var(--purpleL)">&sect; Analisi fiscale &mdash; Sc. B1 (${fmt(modB1)} &euro;/kWp)</div>
       <table><tbody>
-        ${frow('Base ammissibile', fmt(ammB1_capped)+' â¬', 'even')}
-        ${frow('Massimale DM (lett. '+cat.toUpperCase()+')', fmt(mass)+' â¬/kWp', '')}
+        ${frow('Base ammissibile', fmt(ammB1_capped)+' &euro;', 'even')}
+        ${frow('Massimale DM (lett. '+cat.toUpperCase()+')', fmt(mass)+' &euro;/kWp', '')}
         ${frow('Maggiorazione iper', getScaglioneLabel(ammB1_capped), 'even')}
-        ${frow('Maggior costo ammortizz.', fmt(ammB1_capped*mkB1)+' â¬', '')}
-        ${frow('Risparmio IRES nominale ('+fmt(gv('ires'),1)+'%)', fmt(iresB1)+' â¬', 'even', 'var(--purpleL)')}
-        ${frow('Î CAPEX vs Sc. A', 'â '+fmt(deltaB1)+' â¬', '')}
-        ${frow('Vantaggio netto NOMINALE', sgn(netNomB1)+fmt(netNomB1)+' â¬', 'hi', netNomB1>=0?'var(--greenL)':'var(--redL)', true)}
-        ${frow('VAN risparmio IRES ('+discLbl+'%)', fmt(vanB1.van)+' â¬', 'even', 'var(--purpleL)')}
-        ${frow('Vantaggio netto VAN', sgn(netVanB1)+fmt(netVanB1)+' â¬', 'hi', netVanB1>=0?'var(--greenL)':'var(--redL)', true)}
-        ${frow('CAPEX netto post-iper', fmt(capNetB1)+' â¬', 'even', 'var(--accentL)')}
+        ${frow('Maggior costo ammortizz.', fmt(ammB1_capped*mkB1)+' &euro;', '')}
+        ${frow('Risparmio IRES nominale ('+fmt(gv('ires'),1)+'%)', fmt(iresB1)+' &euro;', 'even', 'var(--purpleL)')}
+        ${frow('&Delta; CAPEX vs Sc. A', '&ndash; '+fmt(deltaB1)+' &euro;', '')}
+        ${frow('Vantaggio netto NOMINALE', sgn(netNomB1)+fmt(netNomB1)+' &euro;', 'hi', netNomB1>=0?'var(--greenL)':'var(--redL)', true)}
+        ${frow('VAN risparmio IRES ('+discLbl+'%)', fmt(vanB1.van)+' &euro;', 'even', 'var(--purpleL)')}
+        ${frow('Vantaggio netto VAN', sgn(netVanB1)+fmt(netVanB1)+' &euro;', 'hi', netVanB1>=0?'var(--greenL)':'var(--redL)', true)}
+        ${frow('CAPEX netto post-iper', fmt(capNetB1)+' &euro;', 'even', 'var(--accentL)')}
       </tbody></table>
     </div>
     ${keOn ? `<div class="scard orange">
-      <div class="scard-title" style="color:var(--orangeL)">Â§ Analisi fiscale â Sc. B2 Key Energy (${fmt(modB2)} â¬/kWp)</div>
+      <div class="scard-title" style="color:var(--orangeL)">&sect; Analisi fiscale &mdash; Sc. B2 Key Energy (${fmt(modB2)} &euro;/kWp)</div>
       <table><tbody>
-        ${frow('Base ammissibile', fmt(ammB2_capped)+' â¬', 'even')}
-        ${frow('Massimale DM (lett. '+cat.toUpperCase()+')', fmt(mass)+' â¬/kWp', '')}
+        ${frow('Base ammissibile', fmt(ammB2_capped)+' &euro;', 'even')}
+        ${frow('Massimale DM (lett. '+cat.toUpperCase()+')', fmt(mass)+' &euro;/kWp', '')}
         ${frow('Maggiorazione iper', getScaglioneLabel(ammB2_capped), 'even')}
-        ${frow('Maggior costo ammortizz.', fmt(ammB2_capped*mkB2)+' â¬', '')}
-        ${frow('Risparmio IRES nominale ('+fmt(gv('ires'),1)+'%)', fmt(iresB2)+' â¬', 'even', 'var(--orangeL)')}
-        ${frow('Î CAPEX vs Sc. A', 'â '+fmt(deltaB2)+' â¬', '')}
-        ${frow('Vantaggio netto NOMINALE', sgn(netNomB2)+fmt(netNomB2)+' â¬', netNomB2>=0?'hi':'hiR', netNomB2>=0?'var(--greenL)':'var(--redL)', true)}
-        ${frow('VAN risparmio IRES ('+discLbl+'%)', fmt(vanB2.van)+' â¬', 'even', 'var(--orangeL)')}
-        ${frow('Vantaggio netto VAN', sgn(netVanB2)+fmt(netVanB2)+' â¬', netVanB2>=0?'hi':'hiR', netVanB2>=0?'var(--greenL)':'var(--redL)', true)}
-        ${frow('CAPEX netto post-iper', fmt(capNetB2)+' â¬', 'even', 'var(--accentL)')}
+        ${frow('Maggior costo ammortizz.', fmt(ammB2_capped*mkB2)+' &euro;', '')}
+        ${frow('Risparmio IRES nominale ('+fmt(gv('ires'),1)+'%)', fmt(iresB2)+' &euro;', 'even', 'var(--orangeL)')}
+        ${frow('&Delta; CAPEX vs Sc. A', '&ndash; '+fmt(deltaB2)+' &euro;', '')}
+        ${frow('Vantaggio netto NOMINALE', sgn(netNomB2)+fmt(netNomB2)+' &euro;', netNomB2>=0?'hi':'hiR', netNomB2>=0?'var(--greenL)':'var(--redL)', true)}
+        ${frow('VAN risparmio IRES ('+discLbl+'%)', fmt(vanB2.van)+' &euro;', 'even', 'var(--orangeL)')}
+        ${frow('Vantaggio netto VAN', sgn(netVanB2)+fmt(netVanB2)+' &euro;', netVanB2>=0?'hi':'hiR', netVanB2>=0?'var(--greenL)':'var(--redL)', true)}
+        ${frow('CAPEX netto post-iper', fmt(capNetB2)+' &euro;', 'even', 'var(--accentL)')}
       </tbody></table>
       <div class="info-note orange" style="margin-top:6px">Dato listino da colloqui Key Energy 06.03.2026. Non listino ufficiale vincolante: verificare con richiesta formale a 3SUN.</div>
     </div>` : ''}
@@ -795,12 +795,12 @@ function calculate() {
   const showB2 = keOn && (ammB2_u !== ammB1_u);
   $('van-section').innerHTML = `
   <div class="scard green">
-    <div class="scard-title" style="color:var(--greenL)">Schedule ammortamento fiscale â risparmio IRES per esercizio (coeff. 9% DM 31.12.1988, Gr. XVII)</div>
+    <div class="scard-title" style="color:var(--greenL)">Schedule ammortamento fiscale &mdash; risparmio IRES per esercizio (coeff. 9% DM 31.12.1988, Gr. XVII)</div>
     <div class="${keOn?'tables2':''}">
       <div>
-        <div style="font-size:10px;color:var(--accentL);margin-bottom:4px;font-weight:700">Sc. B1 â base ${fmt(ammB1_capped)} â¬</div>
+        <div style="font-size:10px;color:var(--accentL);margin-bottom:4px;font-weight:700">Sc. B1 &mdash; base ${fmt(ammB1_capped)} &euro;</div>
         <table>
-          <thead><tr><th style="text-align:left">Anno</th><th>Quota %</th><th>IRES saving (â¬)</th><th>PV al ${discLbl}% (â¬)</th><th>Cum. saving (â¬)</th></tr></thead>
+          <thead><tr><th style="text-align:left">Anno</th><th>Quota %</th><th>IRES saving (&euro;)</th><th>PV al ${discLbl}% (&euro;)</th><th>Cum. saving (&euro;)</th></tr></thead>
           <tbody>
             ${vanB1.rows.map((r,i)=>`<tr class="${i%2===0?'even':''}">
               <td>${r.yr === 1?'1 (4,5%)':r.yr === 11?'11 (resid.)':r.yr}</td>
@@ -814,9 +814,9 @@ function calculate() {
         </table>
       </div>
       ${keOn?`<div>
-        <div style="font-size:10px;color:var(--orangeL);margin-bottom:4px;font-weight:700">Sc. B2 KE â base ${fmt(ammB2_capped)} â¬</div>
+        <div style="font-size:10px;color:var(--orangeL);margin-bottom:4px;font-weight:700">Sc. B2 KE &mdash; base ${fmt(ammB2_capped)} &euro;</div>
         <table>
-          <thead><tr><th style="text-align:left">Anno</th><th>Quota %</th><th>IRES saving (â¬)</th><th>PV al ${discLbl}% (â¬)</th><th>Cum. saving (â¬)</th></tr></thead>
+          <thead><tr><th style="text-align:left">Anno</th><th>Quota %</th><th>IRES saving (&euro;)</th><th>PV al ${discLbl}% (&euro;)</th><th>Cum. saving (&euro;)</th></tr></thead>
           <tbody>
             ${vanB2.rows.map((r,i)=>`<tr class="${i%2===0?'even':''}">
               <td>${r.yr === 1?'1 (4,5%)':r.yr === 11?'11 (resid.)':r.yr}</td>
@@ -830,7 +830,7 @@ function calculate() {
         </table>
       </div>`:''}
     </div>
-    <div class="info-note purple" style="margin-top:6px">Il VAN del risparmio IRES (colonna PV) Ã¨ il valore attuale di ogni risparmio futuro. La differenza tra valore nominale e VAN Ã¨ strutturale: al 5%, il VAN Ã¨ tipicamente inferiore di ~70â90 kâ¬ rispetto al nominale per un impianto 1 MWp. Condizione necessaria: capienza IRES in ciascun esercizio del ciclo.</div>
+    <div class="info-note purple" style="margin-top:6px">Il VAN del risparmio IRES (colonna PV) &egrave; il valore attuale di ogni risparmio futuro. La differenza tra valore nominale e VAN &egrave; strutturale: al 5%, il VAN &egrave; tipicamente inferiore di ~70&ndash;90 k&euro; rispetto al nominale per un impianto 1 MWp. Condizione necessaria: capienza IRES in ciascun esercizio del ciclo.</div>
   </div>`;
 
   // ---- ENERGY / DEGRADO ----
@@ -849,22 +849,22 @@ function calculate() {
 
   $('energy-section').innerHTML = `
   <div class="scard teal">
-    <div class="scard-title" style="color:var(--tealL)">Analisi energetica â degrado cumulato ${vita} anni Â· producibilitÃ  base ${fmt(prod)} kWh/kWp</div>
+    <div class="scard-title" style="color:var(--tealL)">Analisi energetica &mdash; degrado cumulato ${vita} anni &middot; producibilit&agrave; base ${fmt(prod)} kWh/kWp</div>
     <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:8px">
       ${mkpi_sm('Prod. anno 1 (A)', fmt(degRowsA[0].prod,1), 'kWh/kWp', 'var(--txtS)')}
       ${mkpi_sm('Prod. anno 1 (B)', fmt(degRowsB[0].prod,1), 'kWh/kWp', 'var(--teal)')}
       ${mkpi_sm('Pareggio prod. annua', xoverAnn, '', 'var(--amber)')}
       ${mkpi_sm('Pareggio cumulato', xoverCum, '', 'var(--amber)')}
-      ${mkpi_sm('Î cum. '+vita+'a', sgn(deltaCumMWh)+fmt(deltaCumMWh,0), 'MWh', deltaCumMWh>=0?'var(--tealL)':'var(--redL)')}
-      ${mkpi_sm('Î valore energetico', sgn(deltaCumVal)+fmt(deltaCumVal), 'â¬', deltaCumVal>=0?'var(--tealL)':'var(--redL)')}
+      ${mkpi_sm('&Delta; cum. '+vita+'a', sgn(deltaCumMWh)+fmt(deltaCumMWh,0), 'MWh', deltaCumMWh>=0?'var(--tealL)':'var(--redL)')}
+      ${mkpi_sm('&Delta; valore energetico', sgn(deltaCumVal)+fmt(deltaCumVal), '&euro;', deltaCumVal>=0?'var(--tealL)':'var(--redL)')}
     </div>
-    <span class="deg-toggle" onclick="toggleDeg()">â¶ Mostra/nascondi tabella degrado per anno</span>
+    <span class="deg-toggle" onclick="toggleDeg()">&#9654; Mostra/nascondi tabella degrado per anno</span>
     <div id="deg-table">
       <table style="margin-top:6px">
         <thead><tr>
           <th style="text-align:left">Anno</th>
           <th>Prod. A (kWh/kWp)</th><th>Prod. B (kWh/kWp)</th>
-          <th>Î annuo</th><th>Î cumulato</th>
+          <th>&Delta; annuo</th><th>&Delta; cumulato</th>
           <th>Cum. A (kWh/kWp)</th><th>Cum. B (kWh/kWp)</th>
         </tr></thead>
         <tbody>
@@ -886,20 +886,20 @@ function calculate() {
         </tbody>
       </table>
     </div>
-    <div class="info-note amber" style="margin-top:6px">Il vantaggio energetico cumulato del Sc. B Ã¨ economicamente trascurabile rispetto al differenziale di CAPEX. Per l'impianto di riferimento (1.000 kWp, 25 anni): Î â ${sgn(deltaCumVal)}${fmt(deltaCumVal)} â¬. Il pareggio cumulato si raggiunge intorno all'anno ${xoverCum}. Il pareggio della produzione annua (anno in cui B produce piÃ¹ di A nel singolo anno) avviene prima: ${xoverAnn}.</div>
+    <div class="info-note amber" style="margin-top:6px">Il vantaggio energetico cumulato del Sc. B &egrave; economicamente trascurabile rispetto al differenziale di CAPEX. Per l'impianto di riferimento (1.000 kWp, 25 anni): &Delta; &#8776; ${sgn(deltaCumVal)}${fmt(deltaCumVal)} &euro;. Il pareggio cumulato si raggiunge intorno all'anno ${xoverCum}. Il pareggio della produzione annua (anno in cui B produce pi&ugrave; di A nel singolo anno) avviene prima: ${xoverAnn}.</div>
   </div>`;
 
   // ---- PAYBACK ----
   $('payback-section').innerHTML = `
   <div class="scard cyan">
-    <div class="scard-title" style="color:var(--cyanL)">Payback comparativo â energia evitata ${fmt(enCost,3)} â¬/kWh Â· risparmio anno 1: ${fmt(savAnn)} â¬</div>
+    <div class="scard-title" style="color:var(--cyanL)">Payback comparativo &mdash; energia evitata ${fmt(enCost,3)} &euro;/kWh &middot; risparmio anno 1: ${fmt(savAnn)} &euro;</div>
     <div class="payback-grid">
-      ${mkpi('Sc. A (energia)', fmt(pbA,1), 'anni', 'var(--txtS)', 'CAPEX: '+fmt(capA)+' â¬')}
-      ${mkpi('Sc. B1 lordo', fmt(pbB1e,1), 'anni', 'var(--amber)', 'CAPEX: '+fmt(capB1)+' â¬')}
-      ${mkpi('Sc. B1 netto iper', fmt(pbB1n,1), 'anni', 'var(--greenL)', 'CAPEX netto: '+fmt(capNetB1)+' â¬')}
-      ${keOn ? mkpi('Sc. B2 netto iper', fmt(pbB2n,1), 'anni', netVanB2>=0?'var(--orangeL)':'var(--redL)', 'CAPEX netto: '+fmt(capNetB2)+' â¬') : ''}
+      ${mkpi('Sc. A (energia)', fmt(pbA,1), 'anni', 'var(--txtS)', 'CAPEX: '+fmt(capA)+' &euro;')}
+      ${mkpi('Sc. B1 lordo', fmt(pbB1e,1), 'anni', 'var(--amber)', 'CAPEX: '+fmt(capB1)+' &euro;')}
+      ${mkpi('Sc. B1 netto iper', fmt(pbB1n,1), 'anni', 'var(--greenL)', 'CAPEX netto: '+fmt(capNetB1)+' &euro;')}
+      ${keOn ? mkpi('Sc. B2 netto iper', fmt(pbB2n,1), 'anni', netVanB2>=0?'var(--orangeL)':'var(--redL)', 'CAPEX netto: '+fmt(capNetB2)+' &euro;') : ''}
     </div>
-    <div class="payback-note">Payback netto: CAPEX ridotto del risparmio IRES a valore nominale diviso risparmio energetico annuale. Per rigore finanziario, applicare il VAN del risparmio IRES invece del valore nominale: il payback effettivo Ã¨ piÃ¹ lungo di ${fmt(Math.abs(iresB1-vanB1.van)/savAnn,1)}â${fmt(Math.abs(iresB1-vanB1.van*0.8)/savAnn,1)} anni rispetto al nominale (scarto VAN/nominale). La capienza IRES Ã¨ condizione necessaria per la fruizione.</div>
+    <div class="payback-note">Payback netto: CAPEX ridotto del risparmio IRES a valore nominale diviso risparmio energetico annuale. Per rigore finanziario, applicare il VAN del risparmio IRES invece del valore nominale: il payback effettivo &egrave; pi&ugrave; lungo di ${fmt(Math.abs(iresB1-vanB1.van)/savAnn,1)}&ndash;${fmt(Math.abs(iresB1-vanB1.van*0.8)/savAnn,1)} anni rispetto al nominale (scarto VAN/nominale). La capienza IRES &egrave; condizione necessaria per la fruizione.</div>
   </div>`;
 
   // Slider tracks
@@ -938,7 +938,7 @@ function frow(label, value, cls='', color='', bold=false) {
 function cbRow(label, vA, vB1, vB2, P, amm, isModulo, keOn, ratio='') {
   const cls = amm ? '' : '';
   const col = amm ? '' : 'color:var(--amber)';
-  const ammMark = amm ? '' : '<span style="color:var(--amber);font-size:9px;margin-left:4px">â</span>';
+  const ammMark = amm ? '' : '<span style="color:var(--amber);font-size:9px;margin-left:4px">&#8856;</span>';
   return `<tr class="${cls}">
     <td style="${col}">${label}${ammMark}${ratio?`<span style="font-size:9px;color:var(--purple);margin-left:4px">${ratio}</span>`:''}${isModulo&&!amm?'':''}</td>
     <td style="text-align:right;font-family:'JetBrains Mono',monospace">${fmt(vA)}<span style="font-size:9px;color:var(--txtM)"> (${fmt(vA*P/1000)}k)</span></td>
@@ -950,17 +950,17 @@ function cbRowTotal(label, uA, uB1, uB2, P, keOn, isAmm) {
   const col = isAmm ? 'var(--accentL)' : 'var(--amber)';
   return `<tr class="hiB">
     <td style="font-weight:700;color:${col}">${label}</td>
-    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700">${fmt(uA)} <span style="font-size:9px">(${fmt(uA*P/1000)}kâ¬)</span></td>
-    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:${col}">${fmt(uB1)} <span style="font-size:9px">(${fmt(uB1*P/1000)}kâ¬)</span></td>
-    ${keOn?`<td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--orangeL)">${fmt(uB2)} <span style="font-size:9px">(${fmt(uB2*P/1000)}kâ¬)</span></td>`:''}
+    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700">${fmt(uA)} <span style="font-size:9px">(${fmt(uA*P/1000)}k&euro;)</span></td>
+    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:${col}">${fmt(uB1)} <span style="font-size:9px">(${fmt(uB1*P/1000)}k&euro;)</span></td>
+    ${keOn?`<td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--orangeL)">${fmt(uB2)} <span style="font-size:9px">(${fmt(uB2*P/1000)}k&euro;)</span></td>`:''}
   </tr>`;
 }
 function cbRowGrand(label, uA, uB1, uB2, P, keOn) {
   return `<tr class="hi">
     <td style="font-weight:700">${label}</td>
-    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700">${fmt(uA*P)} â¬</td>
-    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accentL)">${fmt(uB1*P)} â¬</td>
-    ${keOn?`<td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--orangeL)">${fmt(uB2*P)} â¬</td>`:''}
+    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700">${fmt(uA*P)} &euro;</td>
+    <td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accentL)">${fmt(uB1*P)} &euro;</td>
+    ${keOn?`<td style="text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--orangeL)">${fmt(uB2*P)} &euro;</td>`:''}
   </tr>`;
 }
 function toggleDeg() {
