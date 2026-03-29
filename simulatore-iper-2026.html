@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulatore Iper 2026 â Calcolo beneficio e montanti annuali</title>
-<meta name="description" content="Simulatore interattivo Iperammortamento 2026 â L. 199/2025, commi 427-436. Calcolo beneficio IRES e montanti annuali per fasce progressive.">
-<meta name="author" content="Ing. Marco Belardi â LEAN4DIGITAL">
+<title>Simulatore Iper 2026 — Calcolo beneficio e montanti annuali</title>
+<meta name="description" content="Simulatore interattivo Iperammortamento 2026 — L. 199/2025, commi 427-436. Calcolo beneficio IRES e montanti annuali per fasce progressive.">
+<meta name="author" content="Ing. Marco Belardi — LEAN4DIGITAL">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
@@ -202,7 +202,7 @@ function Simulator() {
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 24 }}>
-        <MetricCard label="Investimento totale" value={fmt(analysis.total)} sub={dB4.0: ${fmt(analysis.totals.b40)} \u00b7 FER: ${fmt(analysis.totals.fer)}`} />
+        <MetricCard label="Investimento totale" value={fmt(analysis.total)} sub={`B4.0: ${fmt(analysis.totals.b40)} \u00b7 FER: ${fmt(analysis.totals.fer)}`} />
         <MetricCard label="Beneficio IRES totale" value={fmt(analysis.grandBenefit)} sub={`Aliquota effettiva: ${fmtPct(analysis.total > 0 ? analysis.grandBenefit / analysis.total : 0)}`} accent />
         <MetricCard label="N. beni" value={beni.length} sub={`Di cui complessi: ${beni.filter(b => b.complex).length}`} />
         <MetricCard label="Periodi d'imposta" value={analysis.yearAnalysis.length} sub={analysis.yearAnalysis.map(y => y.year).join(", ")} />
