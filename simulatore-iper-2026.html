@@ -27,8 +27,8 @@ const { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, Cell,
 
 const BRACKETS = [
   { limit: 2500000, rate: 1.80, ires: 0.432, label: "180% (fino a 2,5M)" },
-  { limit: 10000000, rate: 1.00, ires: 0.24, label: "100% (2,5M\u201310M)" },
-  { limit: 20000000, rate: 0.50, ires: 0.12, label: "50% (10M\u201320M)" },
+  { limit: 10000000, rate: 1.00, ires: 0.24, label: "100% (2,5M–10M)" },
+  { limit: 20000000, rate: 0.50, ires: 0.12, label: "50% (10M–20M)" },
 ];
 
 const fmt = (v) => new Intl.NumberFormat("it-IT", { maximumFractionDigits: 0 }).format(v);
@@ -59,21 +59,21 @@ const COLORS = { total: "#4f46e5", b40: "#2563eb", fer: "#059669", benefit: "#d9
 
 const initialBeni = [
   {
-    id: "A1", name: "Isola robotizzata di pressofusione", classif: "All.IV\u00b7GI\u00b7P3", type: "b40",
+    id: "A1", name: "Isola robotizzata di pressofusione", classif: "All.IV·GI·P3", type: "b40",
     complex: true, value: 0,
     components: [
       { id: "A1.1", name: "Centro di lavoro CNC 5 assi", value: 800000, ae: 2026 },
       { id: "A1.2", name: "Robot antropomorfo di asservimento", value: 450000, ae: 2026 },
-      { id: "A1.3", name: "Sistema di visione e controllo qualit\u00e0", value: 350000, ae: 2027 },
+      { id: "A1.3", name: "Sistema di visione e controllo qualità", value: 350000, ae: 2027 },
       { id: "A1.4", name: "Nastro trasportatore intelligente", value: 200000, ae: 2027 },
     ],
   },
-  { id: "A2", name: "Magazzino automatico verticale", classif: "All.IV\u00b7GI\u00b7P11", type: "b40", complex: false, value: 1200000, ae: 2026, components: [] },
-  { id: "A3", name: "Linea di assemblaggio robotizzata", classif: "All.IV\u00b7GI\u00b7P3", type: "b40", complex: false, value: 900000, ae: 2027, components: [] },
-  { id: "A4", name: "Sistema AGV trasporto interno", classif: "All.IV\u00b7GI\u00b7P4", type: "b40", complex: false, value: 400000, ae: 2027, components: [] },
-  { id: "B1", name: "MES \u2013 Manufacturing Execution System", classif: "All.V\u00b7GI\u00b7P2", type: "b40", complex: false, value: 350000, ae: 2026, components: [] },
-  { id: "B2", name: "Digital Twin piattaforma simulazione", classif: "All.V\u00b7GI\u00b7P3", type: "b40", complex: false, value: 250000, ae: 2027, components: [] },
-  { id: "FV1", name: "Impianto fotovoltaico 500 kWp", classif: "FER\u00b7Fotovoltaico", type: "fer", complex: false, value: 600000, ae: 2027, components: [] },
+  { id: "A2", name: "Magazzino automatico verticale", classif: "All.IV·GI·P11", type: "b40", complex: false, value: 1200000, ae: 2026, components: [] },
+  { id: "A3", name: "Linea di assemblaggio robotizzata", classif: "All.IV·GI·P3", type: "b40", complex: false, value: 900000, ae: 2027, components: [] },
+  { id: "A4", name: "Sistema AGV trasporto interno", classif: "All.IV·GI·P4", type: "b40", complex: false, value: 400000, ae: 2027, components: [] },
+  { id: "B1", name: "MES – Manufacturing Execution System", classif: "All.V·GI·P2", type: "b40", complex: false, value: 350000, ae: 2026, components: [] },
+  { id: "B2", name: "Digital Twin piattaforma simulazione", classif: "All.V·GI·P3", type: "b40", complex: false, value: 250000, ae: 2027, components: [] },
+  { id: "FV1", name: "Impianto fotovoltaico 500 kWp", classif: "FER·Fotovoltaico", type: "fer", complex: false, value: 600000, ae: 2027, components: [] },
 ];
 
 function calcBeneValue(b) {
@@ -171,7 +171,7 @@ function Simulator() {
     setBeni(n);
   };
 
-  const addBene = () => setBeni([...beni, { id: `N${Date.now().toString(36).slice(-3).toUpperCase()}`, name: "Nuovo bene", classif: "All.IV\u00b7GI\u00b7P1", type: "b40", complex: false, value: 100000, ae: 2026, components: [] }]);
+  const addBene = () => setBeni([...beni, { id: `N${Date.now().toString(36).slice(-3).toUpperCase()}`, name: "Nuovo bene", classif: "All.IV·GI·P1", type: "b40", complex: false, value: 100000, ae: 2026, components: [] }]);
 
   const removeBene = (i) => setBeni(beni.filter((_, j) => j !== i));
 
@@ -202,7 +202,7 @@ function Simulator() {
     if (!active || !payload) return null;
     return (<div style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 6, padding: "8px 12px", fontSize: 12, boxShadow: "0 2px 8px rgba(0,0,0,.08)" }}>
       <div style={{ fontWeight: 600, marginBottom: 4 }}>AE {label}</div>
-      {payload.map((p, i) => (<div key={i} style={{ color: p.color, display: "flex", justifyContent: "space-between", gap: 16 }}><span>{p.name}</span><span style={{ fontWeight: 500 }}>{fmt(p.value)} \u20ac</span></div>))}
+      {payload.map((p, i) => (<div key={i} style={{ color: p.color, display: "flex", justifyContent: "space-between", gap: 16 }}><span>{p.name}</span><span style={{ fontWeight: 500 }}>{fmt(p.value)} €</span></div>))}
     </div>);
   };
 
@@ -256,21 +256,21 @@ function Simulator() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
             <div>
               <span style={{ fontSize: 15, fontWeight: 600, color: "#0f172a" }}>AE {ya.year}</span>
-              <span style={{ fontSize: 13, fontWeight: 600, color: "#4f46e5", marginLeft: 10 }}>Montante totale: {fmt(ya.total)} \u20ac</span>
+              <span style={{ fontSize: 13, fontWeight: 600, color: "#4f46e5", marginLeft: 10 }}>Montante totale: {fmt(ya.total)} €</span>
               <span style={{ fontSize: 11, color: "#64748b", marginLeft: 8 }}>(B4.0: {fmt(ya.b40)} + FER: {fmt(ya.fer)})</span>
             </div>
-            <span style={{ fontSize: 14, fontWeight: 600, color: "#d97706" }}>Beneficio: {fmt(ya.totalBenefit)} \u20ac</span>
+            <span style={{ fontSize: 14, fontWeight: 600, color: "#d97706" }}>Beneficio: {fmt(ya.totalBenefit)} €</span>
           </div>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
             {ya.brackets.filter(br => br.base > 0).map((br, i) => (
               <div key={i} style={{ flex: 1, minWidth: 160, background: "#fff", border: "1px solid #e2e8f0", borderRadius: 6, padding: "6px 10px" }}>
                 <div style={{ fontSize: 10, color: "#64748b" }}>{br.label}</div>
-                <div style={{ fontSize: 13, fontWeight: 600 }}>{fmt(br.base)} \u20ac <span style={{ fontWeight: 400, color: "#64748b" }}>&times; {fmtPct(br.ires)}</span></div>
-                <div style={{ fontSize: 12, color: "#d97706", fontWeight: 500 }}>= {fmt(br.benefit)} \u20ac</div>
+                <div style={{ fontSize: 13, fontWeight: 600 }}>{fmt(br.base)} € <span style={{ fontWeight: 400, color: "#64748b" }}>&times; {fmtPct(br.ires)}</span></div>
+                <div style={{ fontSize: 12, color: "#d97706", fontWeight: 500 }}>= {fmt(br.benefit)} €</div>
               </div>
             ))}
           </div>
-          {ya.total > 2500000 && <div style={{ fontSize: 11, color: "#dc2626", fontWeight: 500 }}>&9888; Il montante annuale supera 2.500.000 \u20ac: {fmt(ya.total - 2500000)} \u20ac in seconda fascia (aliquota marginale 24%)</div>}
+          {ya.total > 2500000 && <div style={{ fontSize: 11, color: "#dc2626", fontWeight: 500 }}>&#9888; Il montante annuale supera 2.500.000 €: {fmt(ya.total - 2500000)} € in seconda fascia (aliquota marginale 24%)</div>}
         </div>
       ))}
 
@@ -279,7 +279,7 @@ function Simulator() {
       <div style={{ overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
           <thead><tr style={{ borderBottom: "2px solid #cbd5e1" }}>
-            {["CB","Nome bene","Tipo","","Valore \u20ac","AE",""].map((h,i) => (
+            {["CB","Nome bene","Tipo","","Valore €","AE",""].map((h,i) => (
               <th key={i} style={{ textAlign: i===4?"right":"left", padding: "6px 4px", fontSize: 11, color: "#64748b", fontWeight: 500 }}>{h}</th>
             ))}
           </tr></thead>
@@ -303,7 +303,7 @@ function Simulator() {
                     <td style={{ padding: "5px 4px" }}>
                       <button onClick={() => toggleComplex(idx)}
                         style={{ fontSize: 10, padding: "1px 6px", borderRadius: 4, border: b.complex?"1px solid #d97706":"1px solid #cbd5e1", background: b.complex?"#fef3c7":"transparent", color: b.complex?"#92400e":"#64748b", cursor: "pointer" }}>
-                        {b.complex?"\u2726 C":"C"}
+                        {b.complex?"✦ C":"C"}
                       </button>
                     </td>
                     <td style={{ padding: "5px 4px", textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
